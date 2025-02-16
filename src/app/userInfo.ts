@@ -9,6 +9,8 @@ import { idString } from "../model/type/type";
 export default class phiUserInfo {
     constructor(ctx: Context, config: Config) {
         ctx.command('phi.data', '查看用户data').action(async ({ session }) => {
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
 
             if (await send.isBan(session, 'data')) {
                 return;
@@ -20,10 +22,10 @@ export default class phiUserInfo {
                     let data = User.gameProgress.money
                     send.send_with_At(session, `您的data数为：${data[4] ? `${data[4]}PB ` : ''}${data[3] ? `${data[3]}TB ` : ''}${data[2] ? `${data[2]}GB ` : ''}${data[1] ? `${data[1]}MB ` : ''}${data[0] ? `${data[0]}KB ` : ''}`)
                 } else {
-                    send.send_with_At(session, `请先更新数据哦！\n/phi update`)
+                    send.send_with_At(session, `请先更新数据哦！\n${prefix}phi update`)
                 }
             } else {
-                send.send_with_At(session, `请先绑定sessionToken哦！\n/phi bind <sessionToken>`)
+                send.send_with_At(session, `请先绑定sessionToken哦！\n${prefix}phi bind <sessionToken>`)
             }
             return;
         })

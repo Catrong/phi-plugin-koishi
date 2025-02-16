@@ -25,8 +25,10 @@ export default class guessLetter {
     /**发起出字母猜歌 **/
     static start(session: Session, gameList: { [key: string]: { gameType: string } }, msg: string) {
         let { guildId } = session // 使用对象解构提取guildId
+        // 获取指令前缀
+        const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
         if (anslist[guildId]) {
-            send.send_with_At(session, session.text(i18nList.letter.haveAnotherGame), true)
+            send.send_with_At(session, session.text(i18nList.letter.haveAnotherGame,{prefix:prefix}), true)
             return false
         }
         gameList[guildId] = { gameType: 'letter' }

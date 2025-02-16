@@ -18,6 +18,8 @@ export default class guessIll {
     /**猜曲绘 */
     static async start(ctx: Context, session: Session, gameList) {
         let { guildId } = session
+        // 获取指令前缀
+        const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
         if (gamelist[guildId]) {
             send.send_with_At(session, "请不要重复发起哦！", true)
             return true
@@ -83,7 +85,7 @@ export default class guessIll {
         let fnc = [0, 1, 2, 3]
         logger.info(data)
 
-        send.send_with_At(session, `下面开始进行猜曲绘哦！回答可以直接发送哦！每过${config.GuessTipCd}秒后将会给出进一步提示。发送 /phi ans 结束游戏`)
+        send.send_with_At(session, `下面开始进行猜曲绘哦！回答可以直接发送哦！每过${config.GuessTipCd}秒后将会给出进一步提示。发送 ${prefix}phi ans 结束游戏`)
         if (config.GuessRecall)
             await send.send_with_At(session, await render(ctx, 'guess', data), false, config.GuessTipCd)
         else

@@ -50,15 +50,15 @@ export const i18nList = {
 export function apply(ctx: Context) {
     ctx.i18n.define('zh-CN', {
         beGroupBan: '这里被管理员禁止使用这个功能了呐QAQ！',
-        haveToBind: '请先绑定sessionToken哦！\n如果不知道自己的sessionToken可以尝试扫码绑定嗷！\n获取二维码：/phi bind qrcode\n帮助：/phi tk help\n格式：/phi bind <sessionToken>',
-        haveToUpdate: '请先更新数据哦！\n格式：/phi update',
-        haveToInputToken: '喂喂喂！你还没输入sessionToken呐！\n扫码绑定：/phi bind qrcode\n普通绑定：/phi bind <sessionToken>',
+        haveToBind: '请先绑定sessionToken哦！\n如果不知道自己的sessionToken可以尝试扫码绑定嗷！\n获取二维码：{prefix}phi bind qrcode\n帮助：{prefix}phi tk help\n格式：{prefix}phi bind <sessionToken>',
+        haveToUpdate: '请先更新数据哦！\n格式：{prefix}phi update',
+        haveToInputToken: '喂喂喂！你还没输入sessionToken呐！\n扫码绑定：{prefix}phi bind qrcode\n普通绑定：{prefix}phi bind <sessionToken>',
         notFoundSong: '没有找到{0}的有关信息QAQ！',
-        haveAnotherGame: '当前存在其他未结束的游戏嗷！如果想要开启新游戏请 /phi ans 结束进行的游戏嗷！',
+        haveAnotherGame: '当前存在其他未结束的游戏嗷！如果想要开启新游戏请 {prefix}phi ans 结束进行的游戏嗷！',
 
-        letterHaveAnotherGame: '已经在玩开字母啦！如果想要重新开始请先/phi ans结束本局游戏哦！',
-        letterNotFoundGame: '现在还没有进行的开字母捏，快输入"/phi letter"开始一局吧！',
-        letterStart: '出你字母已开始！回复"/nX.XXXX"命令猜歌，例如："/n1.Reimei";发送/open X来翻开字母(不区分大小写，不需要指令头)，如/open A;发送/ ans结束并查看答案哦！',
+        letterHaveAnotherGame: '已经在玩开字母啦！如果想要重新开始请先{prefix}phi ans结束本局游戏哦！',
+        letterNotFoundGame: '现在还没有进行的开字母捏，快输入"{prefix}phi letter"开始一局吧！',
+        letterStart: '出你字母已开始！回复"/nX.XXXX"命令猜歌，例如："/n1.Reimei";发送{prefix}open X来翻开字母(不区分大小写，不需要指令头)，如{prefix}open A;发送{prefix}phi ans结束并查看答案哦！',
         letterNotFoundSong: '没有找到对应的曲库嗷！',
         letterGameOver: '全部歌曲已开启！出你字母已结束！',
         letterBody: '当前考试范围：{0}\n已翻开字母：{1}\n{2}',

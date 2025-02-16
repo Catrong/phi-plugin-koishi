@@ -19,7 +19,11 @@ export default class phiSstk {
     constructor(ctx: Context, config: Config) {
 
         ctx.command('phi.bind <string>', '绑定sessionToken').action(async ({ session }, token) => {
+            
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
 
+            // 接下来我不知道
             if (await send.isBan(session, 'help')) {
                 return;
             }
@@ -27,7 +31,7 @@ export default class phiSstk {
             let sessionToken = token?.match(/[0-9a-zA-Z]{25}|qrcode/g)[0]
 
             if (!sessionToken) {
-                return session.text('haveToInputToken')
+                return session.text('haveToInputToken',{prefix:prefix})
             }
 
             if (sessionToken == "qrcode") {
@@ -69,7 +73,7 @@ export default class phiSstk {
                 }
             }
 
-            send.send_with_At(session, `请注意保护好自己的sessionToken呐！如果需要获取已绑定的sessionToken可以私聊发送 /phi sessionToken 哦！`, false, 10)
+            send.send_with_At(session, `请注意保护好自己的sessionToken呐！如果需要获取已绑定的sessionToken可以私聊发送 ${prefix}phi sessionToken 哦！`, false, 10)
 
 
             if (!config.isGuild) {
@@ -86,13 +90,16 @@ export default class phiSstk {
 
         ctx.command('phi.update', '更新存档').action(async ({ session }) => {
 
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
+
             if (await send.isBan(session, 'update')) {
                 return null
             }
 
             let token = await getSave.get_user_token(session.userId)
             if (!token) {
-                send.send_with_At(session, `没有找到你的存档哦！请先绑定sessionToken！\n帮助：/phi tk help\n格式：/phi bind <sessionToken>`)
+                send.send_with_At(session, `没有找到你的存档哦！请先绑定sessionToken！\n帮助：${prefix}phi tk help\n格式：${prefix}phi bind <sessionToken>`)
                 return null
             }
 
@@ -204,12 +211,16 @@ export default class phiSstk {
 }
 
 async function build(ctx: Context, session: Session, sessionToken: string, config: Config) {
+                
+    // 获取指令前缀
+    const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
+
     let User: PhigrosUser | Save
     try {
         User = new PhigrosUser(sessionToken)
     } catch (err) {
         logger.error(`[phi-plugin]绑定sessionToken错误`, err)
-        send.send_with_At(session, `绑定sessionToken错误QAQ!\n错误的sstk:${sessionToken}\n帮助：/phi tk help\n格式：/phi bind <sessionToken>`, false, 10)
+        send.send_with_At(session, `绑定sessionToken错误QAQ!\n错误的sstk:${sessionToken}\n帮助：${prefix}phi tk help\n格式：${prefix}phi bind <sessionToken>`, false, 10)
         return true
     }
 

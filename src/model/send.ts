@@ -50,13 +50,16 @@ class send {
 
         let user_save = await getSave.getSave(session.userId)
 
+        // 获取指令前缀
+        const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
+
         if (!sessionToken) {
-            this.send_with_At(session, session.text(i18nList.haveToBind))
+            this.send_with_At(session, session.text(i18nList.haveToBind,{ prefix: prefix }))
             return null
         }
 
         if (!user_save || (ver && (!user_save.Recordver || user_save.Recordver < ver))) {
-            this.send_with_At(session, session.text(i18nList.haveToUpdate))
+            this.send_with_At(session, session.text(i18nList.haveToUpdate,{ prefix: prefix}))
             return null
         }
 

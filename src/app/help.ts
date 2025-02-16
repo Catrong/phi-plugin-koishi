@@ -11,11 +11,13 @@ export default class phiHelp {
     constructor(ctx: Context) {
         ctx.command('phi.help', '查看帮助', { authority: 0 }).action(async ({ session }) => {
 
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
             if (await send.isBan(session, 'help')) {
                 return;
             }
-
-            let helpGroup = await getFile.FileReader(path.join(infoPath, 'help.json'))
+            const variables = { prefix:prefix };
+            let helpGroup = await getFile.FileReader(path.join(infoPath, 'help.json'), "JSON" ,variables);
             
             session.send(await render(ctx, "help", {
                 helpGroup: helpGroup,

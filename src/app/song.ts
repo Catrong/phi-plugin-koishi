@@ -15,12 +15,16 @@ import { idString } from "../model/type/type";
 export default class phiSong {
     constructor(ctx: Context, config: Config) {
         ctx.command('phi.song <message:text>', '查看歌曲信息').action(async ({ session }, arg = "") => {
+
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
+
             if (await send.isBan(session, 'song')) {
                 return;
             }
 
             if (!arg) {
-                send.send_with_At(session, `请指定曲名哦！\n格式：/phi song <曲名>`)
+                send.send_with_At(session, `请指定曲名哦！\n格式：${prefix}phi song <曲名>`)
                 return;
             }
             let ids = getInfo.fuzzysongsnick(arg)
@@ -41,12 +45,16 @@ export default class phiSong {
         })
 
         ctx.command('phi.ill <message:text>', '查看曲绘信息').action(async ({ session }, arg = "") => {
+
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
+
             if (await send.isBan(session, 'ill')) {
                 return;
             }
 
             if (!arg) {
-                send.send_with_At(session, `请指定曲名哦！\n格式：/phi ill <曲名>`)
+                send.send_with_At(session, `请指定曲名哦！\n格式：${prefix}phi ill <曲名>`)
                 return;
             }
             let ids = getInfo.fuzzysongsnick(arg)
@@ -68,6 +76,9 @@ export default class phiSong {
 
         ctx.command('phi.rand <message:text>', '随机曲目').action(async ({ session }, arg = "") => {
             /**随机定级范围内曲目 */
+
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
 
             if (await send.isBan(session, 'randmic')) {
                 return;
@@ -92,7 +103,7 @@ export default class phiSong {
             if (rank[0]) {
                 if (rank[0].includes('+')) {
                     if (rank[1]) {
-                        send.send_with_At(session, `含有 '+' 的难度不支持指定范围哦！\n/phi rand <定数>+ <难度(可多选)>`, true)
+                        send.send_with_At(session, `含有 '+' 的难度不支持指定范围哦！\n${prefix}phi rand <定数>+ <难度(可多选)>`, true)
                         return;
                     } else {
                         bottom = Number(rank[0].replace('+', ''))
@@ -101,7 +112,7 @@ export default class phiSong {
                 } else if (rank[0].includes('-') && !rank[1]) {
                     bottom = Number(rank[0].replace('-', ''))
                     if (bottom != bottom) {
-                        send.send_with_At(session, `${rank[0]} 不是一个定级哦\n#/phi rand <定数>- <难度(可多选)>`, true)
+                        send.send_with_At(session, `${rank[0]} 不是一个定级哦\n${prefix}phi rand <定数>- <难度(可多选)>`, true)
                         return;
                     } else {
                         bottom = 0
@@ -112,7 +123,7 @@ export default class phiSong {
                     if (rank[1]) {
                         top = Number(rank[1])
                         if (bottom != bottom || top != top) {
-                            send.send_with_At(session, `${rank[0]} - ${rank[1]} 不是一个定级范围哦\n/phi rand <定数1> - <定数2> <难度(可多选)>`, true)
+                            send.send_with_At(session, `${rank[0]} - ${rank[1]} 不是一个定级范围哦\n${prefix}phi rand <定数1> - <定数2> <难度(可多选)>`, true)
                             return;
                         }
                         if (top < bottom) {
@@ -124,7 +135,7 @@ export default class phiSong {
                     } else {
                         bottom = Number(rank[0])
                         if (bottom != bottom) {
-                            send.send_with_At(session, `${rank[0]} 不是一个定级哦\n#/phi rand <定数> <难度(可多选)>`, true)
+                            send.send_with_At(session, `${rank[0]} 不是一个定级哦\n#${prefix}phi rand <定数> <难度(可多选)>`, true)
                             return;
                         } else {
                             top = bottom
@@ -270,6 +281,9 @@ export default class phiSong {
         })
 
         ctx.command('phi.com <message:text>', '计算等效rks').action(async ({ session }, arg = "") => {
+            
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
 
             if (await send.isBan(session, 'comrks')) {
                 return;
@@ -282,7 +296,7 @@ export default class phiSong {
                 send.send_with_At(session, `dif: ${dif} acc: ${acc}\n计算结果：${fCompute.rks(Number(acc), Number(dif))}`, true)
                 return;
             } else {
-                send.send_with_At(session, `格式错误QAQ！\n格式：/phi com <定数> <acc>`)
+                send.send_with_At(session, `格式错误QAQ！\n格式：${prefix}phi com <定数> <acc>`)
                 return;
             }
         })

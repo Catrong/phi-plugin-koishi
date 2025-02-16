@@ -15,8 +15,9 @@ import { idString } from "../model/type/type";
 
 export default class phiB19 {
     constructor(ctx: Context, config: Config) {
+        
         ctx.command('phi.pgr', '获取B19').option('best', '-b <val:natural> 输出bN', { fallback: 21 }).action(async ({ session, options }) => {
-
+            // 我不知道
             if (await send.isBan(session, 'b19')) {
                 return;
             }
@@ -35,7 +36,7 @@ export default class phiB19 {
             nnum = Math.max(nnum, 33)
             nnum = Math.min(nnum, config.B19MaxNum)
 
-            let plugin_data = await getPluginData.get(session.userId)
+            let plugin_data = getPluginData.get(session.userId)
 
 
             if (!config.isGuild)
@@ -120,7 +121,7 @@ export default class phiB19 {
                 backgroundUrl: await fCompute.getBackground(save.gameuser.background),
                 PlayerId: save.saveInfo.PlayerId,
             }
-            let plugin_data = await getPluginData.get(session.userId)
+            let plugin_data = getPluginData.get(session.userId)
 
             let data = {
                 phi: save_b19.phi,
@@ -140,6 +141,11 @@ export default class phiB19 {
         })
 
         ctx.command('phi.score <message:text>', '单曲分数').action(async ({ session }, arg = "") => {
+
+            // 获取指令前缀
+            const prefix:string = session.resolve(session.app.koishi.config.prefix)[0] ?? ''
+
+            // 接下来我不知道
             if (await send.isBan(session, 'singlescore')) {
                 return;
             }
@@ -154,7 +160,7 @@ export default class phiB19 {
             let song = arg
 
             if (!song) {
-                send.send_with_At(session, `请指定曲名哦！\n格式：/phi score <曲名>`)
+                send.send_with_At(session, `请指定曲名哦！\n格式：${prefix}phi score <曲名>`)
                 return;
             }
 
@@ -170,7 +176,7 @@ export default class phiB19 {
             let ans = Record[songId]
 
             if (!ans) {
-                send.send_with_At(session, `我不知道你关于[${songName}]的成绩哦！可以试试更新成绩哦！\n格式：/phi update`)
+                send.send_with_At(session, `我不知道你关于[${songName}]的成绩哦！可以试试更新成绩哦！\n格式：${prefix}phi update`)
                 return;
             }
 
@@ -301,7 +307,7 @@ export default class phiB19 {
 
             data = data.sort(cmpsugg())
 
-            let plugin_data = await getPluginData.get(session.userId)
+            let plugin_data = getPluginData.get(session.userId)
 
             send.send_with_At(session, await render(ctx, 'list', {
                 head_title: "推分建议",

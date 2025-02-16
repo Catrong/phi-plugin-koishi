@@ -12,39 +12,69 @@ export default class getFile {
      * 读取文件
      * @param filePath 完整路径
      * @param style 强制设置文件格式
+     * @param variables 需要替换的变量对象（例如：{ username: 'John' }）
      */
-    static FileReader(filePath: string, style: string | 'JSON' | 'YAML' | 'TXT' = undefined) {
+    static FileReader(filePath: string, style: string | 'JSON' | 'YAML' | 'TXT' = undefined, variables: Object = {}) {
         try {
             if (!fs.existsSync(filePath)) { return false }
-            // console.info(filePath)
+            
             if (!style) {
-                style = path.extname(filePath).toUpperCase().replace('.', '')
+                style = path.extname(filePath).toUpperCase().replace('.', '');
             }
+
+            let fileContent = '';
             switch (style) {
                 case 'JSON': {
-                    return JSON.parse(fs.readFileSync(filePath, 'utf8'))
+                    fileContent = fs.readFileSync(filePath, 'utf8');
+                    const parsedContent = JSON.parse(fileContent);
+                    return this.replaceVariables(parsedContent, variables); // 替换占位符
                 }
-                // case 'CSV': {
-                //     return (await csv().fromString(fs.readFileSync(filePath, 'utf8')))
-                // }
                 case 'YAML': {
-                    return YAML.parse(fs.readFileSync(filePath, 'utf8'))
+                    fileContent = fs.readFileSync(filePath, 'utf8');
+                    const parsedContent = YAML.parse(fileContent);
+                    return this.replaceVariables(parsedContent, variables); // 替换占位符
                 }
                 case 'TXT': {
-                    return fs.readFileSync(filePath, 'utf8')
+                    fileContent = fs.readFileSync(filePath, 'utf8');
+                    return this.replaceVariables(fileContent, variables); // 替换占位符
                 }
                 default: {
-
-                    return fs.readFileSync(filePath, 'utf8')
+                    fileContent = fs.readFileSync(filePath, 'utf8');
+                    return this.replaceVariables(fileContent, variables); // 替换占位符
                 }
             }
         } catch (error) {
-            logger.warn(`[phi-plugin][${filePath}] 读取失败`)
-            logger.warn(error)
-            return false
+            logger.warn(`[phi-plugin][${filePath}] 读取失败`);
+            logger.warn(error);
+            return false;
         }
     }
 
+    /**
+     * 替换文本中的占位符
+     * @param content 内容
+     * @param variables 需要替换的变量对象
+     */
+    static replaceVariables(content: any, variables: Object) {
+        // 如果没有传入 variables，直接返回原始内容
+        if (Object.keys(variables).length === 0) {
+            return content;
+        }
+
+        if (typeof content === 'string') {
+            // 如果是字符串，替换占位符
+            return content.replace(/{(\w+)}/g, (_, key) => variables[key] || `{${key}}`);
+        }
+
+        if (typeof content === 'object') {
+            // 如果是对象，递归替换
+            for (let key in content) {
+                content[key] = this.replaceVariables(content[key], variables);
+            }
+        }
+
+        return content;
+    }
 
     static async csvReader(filePath: string) {
         return await csv().fromFile(filePath)
