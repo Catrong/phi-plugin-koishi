@@ -12,7 +12,7 @@ export const pluginName = path.basename(path.join(pluginPath, '../../'))
 export const pluginRoot = __dirname.replace(/\\/g, '/').replace(/\/components/, '')
 
 /**插件资源目录 */
-export const pluginResources = path.join(pluginRoot, 'resources')
+export const pluginResources = path.join(pluginPath, 'resources')
 
 export const htmlPath = path.join(pluginResources, 'html')
 

@@ -33,7 +33,7 @@ export default class guessLetter {
         let totList = msg ? [] : Object.keys(getInfo.idBySong)
         range[guildId] = msg ? [] : ['phigros']
         let askList = msg.split(' ')
-        console.info(askList)
+        // console.info(askList)
         for (let i in getInfo.DLC_Info) {
             if (askList.indexOf(i) != -1) {
                 totList = totList.concat(getInfo.DLC_Info[i])
