@@ -5,7 +5,7 @@ const README_path = `${pluginPath}/README.md`
 
 let changelogs = []
 /**v 0.0.0 */
-let currentVersion: string = ''
+let currentVersion: string = 'Koishi'
 
 // try {
 //     if (fs.existsSync(README_path)) {
