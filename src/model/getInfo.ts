@@ -284,7 +284,7 @@ export default class getInfo {
     * @returns 原曲id数组，按照匹配程度降序
     */
     static fuzzysongsnick(mic: string, Distance: number = 0.85): idString[] {
-        const fuzzyMatch = (str1, str2) => {
+        const fuzzyMatch = (str1: string, str2: string) => {
             if (str1 == str2) {
                 return 1
             }
