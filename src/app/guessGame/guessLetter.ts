@@ -91,11 +91,11 @@ export default class guessLetter {
             return false
         }
 
-        if (!msg.match(/^n[0-9]+./g)) {
+        if (!msg.match(/n[0-9]+./g)) {
             return false
         }
 
-        let guess = msg.match(/^n[0-9]+./g)[0]
+        let guess = msg.match(/n[0-9]+./g)[0]
 
         let index = Number(guess.match(/[0-9]+/g)[0]) - 1
 
@@ -233,6 +233,12 @@ function checkGameOver(guildId: string, blurlist: string[]) {
     return true
 }
 
+/**
+ * 获取显示的谜面
+ * @param guildId 
+ * @param blurlist 
+ * @returns 
+ */
 function getBlurRes(guildId: string, blurlist: string[]) {
     let res = ''
     for (let i = 0; i < blurlist.length; i++) {
