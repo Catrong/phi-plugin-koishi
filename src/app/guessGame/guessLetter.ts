@@ -167,7 +167,9 @@ export default class guessLetter {
 
         session.send(session.text(i18nList.letter.getTip, [tip]))
 
-        openlist[guildId].push(tip)
+        openlist[guildId].push(tip.toLowerCase())
+
+        res = getBlurlist(guildId)
 
         if (checkGameOver(guildId, res)) {
             gameOver(guildId, gameList, session)
