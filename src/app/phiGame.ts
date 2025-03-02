@@ -49,6 +49,8 @@ export default class phiGames {
                     return guessLetter.guess(ctx, session, gameList, session.content) ? null : next();
                 } else if (rex[2].test(session.content)) {
                     return guessLetter.getTip(ctx, session, gameList) ? null : next();
+                } else if (rex[3].test(session.content)) {
+                    return guessLetter.ans(ctx, session, gameList) ? null : next();
                 }
             }
             return next()
