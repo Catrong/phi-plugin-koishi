@@ -7,7 +7,7 @@ import { guessLetter } from "./guessGame/index"
 
 let games = "(提示猜曲|tipgame|ltr|letter|开字母|guess|猜曲绘)"
 let gameList: { [key: string]: { gameType: string } } = {}
-let rex = [new RegExp(`^.*open.*`, 'i'), new RegExp(`^.*[0-9]+\..*`, 'i'), new RegExp(`^.*tip`, 'i'), new RegExp(`^.*ans`, 'i')]
+let rex = [new RegExp(`^.*open.*$`, 'i'), new RegExp(`^.*[0-9]+\..*$`, 'i'), new RegExp(`^.*tip$`, 'i'), new RegExp(`^.*ans$`, 'i')]
 
 export default class phiGames {
     constructor(ctx: Context, config: Config) {
