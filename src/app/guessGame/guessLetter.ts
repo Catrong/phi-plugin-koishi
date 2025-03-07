@@ -202,7 +202,7 @@ function getBlurlist(guildId: string): string[] {
     for (let i = 0; i < ans.length; i++) {
         let str = ''
         for (let j = 0; j < ans[i].length; j++) {
-            if (openlist[guildId].includes(pinyin(ans[i][j], { pattern: 'first', toneType: 'none', type: 'string' }).toLowerCase())) {
+            if (winnerlist[guildId][i] || openlist[guildId].includes(pinyin(ans[i][j], { pattern: 'first', toneType: 'none', type: 'string' }).toLowerCase())) {
                 // console.info(pinyin(ans[i][j], { pattern: 'first', toneType: 'none', type: 'string' }), ans[i][j])
                 str += ans[i][j]
             } else {

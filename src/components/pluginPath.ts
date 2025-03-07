@@ -3,7 +3,7 @@ import path from 'path'
 
 
 /**插件根目录 */
-export const pluginPath = __dirname.replace(/\\/g, '/').replace(/\/(src|lib)\/components/, '')
+export const pluginPath = __dirname.replace(/\\/g, '/').replace(/(\/src)?(\/lib)?(\/components)?$/, '')
 const _path = process.cwd().replace(/\\/g, '/')
 
 /**插件名 */

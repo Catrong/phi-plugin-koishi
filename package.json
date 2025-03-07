@@ -1,7 +1,7 @@
 {
     "name": "koishi-plugin-phi-plugin",
     "description": "Phigros查分",
-    "version": "0.1.62",
+    "version": "0.1.63",
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
     "files": [
