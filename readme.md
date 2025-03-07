@@ -1,30 +1,21 @@
 # koishi-plugin-phi-plugin
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-phi-plugin?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-phi-plugin)
+[![phi-plugin](https://img.shields.io/badge/GitHub仓库-phi--plugin-9cf?style=flat-square&logo=github)](https://github.com/Catrong/phi-plugin)
+[![phi-plugin](https://img.shields.io/badge/Gitee仓库-phi--plugin-9cf?style=flat-square&logo=gitee)](https://gitee.com/catrong/phi-plugin)
+![version](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-0.9.7-9cf?style=flat-square)
+![version](https://img.shields.io/badge/Phigros-3.10.4-9cf?style=flat-square)
+[![YunzaiBot](https://img.shields.io/badge/Yunzai-v3.0-9cf?style=flat-square&logo=dependabot)](https://gitee.com/yoimiya-kokomi/Yunzai-Bot)
+[![MiaoYunzai](https://img.shields.io/badge/Miao--Yunzai-v3.0-9cf?style=flat-square&logo=dependabot)](https://gitee.com/yoimiya-kokomi/Miao-Yunzai)
+[![TrssYunzai](https://img.shields.io/badge/TRSS--Yunzai-v3.0-9cf?style=flat-square&logo=dependabot)](https://gitee.com/TimeRainStarSky/Yunzai)
+[![Guild](https://img.shields.io/badge/频道-Hutao114Pgr939-9cf?style=flat-square&logo=GroupMe)](https://pd.qq.com/s/e3z86q6bw)
+[![Guild](https://img.shields.io/badge/频道-RkBwFBaRqa-9cf?style=flat-square&logo=Discord)](https://discord.gg/invite/RkBwFBaRqa)
+[![Bilibili](https://img.shields.io/badge/Bilibili-就是不会告诉你-ff69b4?style=flat-square&logo=bilibili)](https://space.bilibili.com/403342249)
+[![Stars](https://img.shields.io/github/stars/Catrong/phi-plugin?style=flat-square&color=yellow&label=Star)](../../stargazers)
 
-Phigros查分
+中文 | [English](./README_en.md)
 
-<div align="center">
-  
-<a href="">
-  <picture>
-    <source srcset="https://github.com/user-attachments/assets/c18cd28c-220e-445d-9001-3f7a8f25ac51" type="image/avif" width="80%" />
-    <img src="https://github.com/Catrong/phi-plugin/assets/117198625/731e11cb-71d3-4575-8c0d-b9cedcd442d4" width="80%" />
-</picture>
-
-[![phi-plugin](https://img.shields.io/badge/GitHub仓库-phi--plugin-9cf?style=for-the-badge&logo=github)](https://github.com/Catrong/phi-plugin)
-[![phi-plugin](https://img.shields.io/badge/Gitee仓库-phi--plugin-9cf?style=for-the-badge&logo=gitee)](https://gitee.com/catrong/phi-plugin)
-![version](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-0.9.7-9cf?style=for-the-badge)
-![version](https://img.shields.io/badge/Phigros-3.10.4-9cf?style=for-the-badge)
-[![YunzaiBot](https://img.shields.io/badge/Yunzai-v3.0-9cf?style=for-the-badge&logo=dependabot)](https://gitee.com/yoimiya-kokomi/Yunzai-Bot)
-[![MiaoYunzai](https://img.shields.io/badge/Miao--Yunzai-v3.0-9cf?style=for-the-badge&logo=dependabot)](https://gitee.com/yoimiya-kokomi/Miao-Yunzai)
-[![TrssYunzai](https://img.shields.io/badge/TRSS--Yunzai-v3.0-9cf?style=for-the-badge&logo=dependabot)](https://gitee.com/TimeRainStarSky/Yunzai)
-[![Guild](https://img.shields.io/badge/频道-Hutao114Pgr939-9cf?style=for-the-badge&logo=GroupMe)](https://pd.qq.com/s/e3z86q6bw)
-[![Guild](https://img.shields.io/badge/频道-RkBwFBaRqa-9cf?style=for-the-badge&logo=Discord)](https://discord.gg/invite/RkBwFBaRqa)
-[![Bilibili](https://img.shields.io/badge/Bilibili-就是不会告诉你-ff69b4?style=for-the-badge&logo=bilibili)](https://space.bilibili.com/403342249)
-[![Stars](https://img.shields.io/github/stars/Catrong/phi-plugin?style=for-the-badge&color=yellow&label=Star)](../../stargazers)
-
-### 中文 | [English](./README_en.md)
+#### Phigros查分插件
 
 </div>
   
