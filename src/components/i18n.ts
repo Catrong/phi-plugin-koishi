@@ -168,7 +168,7 @@ export function apply(ctx: Context) {
 
         bindHaveToInputToken: `喂喂喂！你还没输入sessionToken呐！` + bindTip,
         bindErrToken: `绑定sessionToken错误QAQ!\n错误的tk:{0}` + bindTip,
-        bindQRCode: `\n请点击链接或扫码进行登录嗷！请勿使用他人的链接。请注意，登录TapTap可能造成账号及财产损失，请在信任Bot来源的情况下扫码登录。`,
+        bindQRCode: `\n请点击链接或使用最新版TapTap扫码进行登录嗷！请勿使用他人的链接。请注意，登录TapTap可能造成账号及财产损失，请在信任Bot来源的情况下扫码登录。`,
         bindQRCodeBeUsed: `登录二维码已扫描，请确认登录`,
         bindQRCodeTimeout: `操作超时，请重试！`,
         bindQRCodeFail: `获取sessionToken失败QAQ！请确认您的Phigros已登录TapTap账号！\n错误信息：{0}`,

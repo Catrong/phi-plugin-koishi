@@ -16,14 +16,14 @@ Burn(Haocore Mix):
   - 烤全压SP
   - 考全压SP
   - 烤鸭SP
-Sigma(Haocore Mix)～105秒の伝説～:
+Sigma (Haocore Mix) ~ 105秒の伝説 ~:
   - sigma表SP
   - sigmaSP1
   - sigma表谱
   - sigma105
   - 绿sigma
   - "105"
-Sigma(Haocore Mix)～Regrets of The Yellow Tulip～:
+Sigma (Haocore Mix) ~ Regrets of The Yellow Tulip ~:
   - sigma里SP
   - sigmaSP2
   - 黄色郁金香的遗憾
@@ -42,6 +42,36 @@ Retribution ~ Cycle of Redemption ~:
   - 2024愚人节
   - rcor
   - 报应愚人节
+  - 救赎之期
+The Chariot ~REVIIVAL~(2024 April Fools' Day):
+  - 战车SP
+  - 战车愚人节
+  - chariotSP
+Revisit(2024 April Fools' Day):
+  - 报应SP曲绘1
+Retribution(2024 April Fools' Day):
+  - 报应SP曲绘2
+Luminescence(2024 April Fools' Day):
+  - 冷光SP
+  - luminescence SP
+Distorted Fate(2024 April Fools' Day):
+  - DFSP
+  - 扭曲的命SP
+  - 扭曲命运SP
+  - 扭曲的命运愚人节
+  - 扭曲命运愚人节
+  - Distorted Fate SP
+DESTRUCTION 3,2,1(2024 April Fools' Day):
+  - 毁灭321SP
+  - d321SP
+  - 幽蓝边界SP
+  - 毁灭321愚人节
+  - 幽蓝边界愚人节
+  - 321SP
+Crave Wave(2024 April Fools' Day):
+  - Crave Wave SP
+  - 奢望之浪SP
+  - CWSP
 Christmas:
   - 圣诞SP
   - 圣诞快乐
@@ -185,6 +215,8 @@ BonusTime.MegaloPaleWhite:
 ENERGYSYNERGYMATRIX.Tanchiky:
   - ESM
   - ESM跑
+  - 三只猫
+  - 三猫
 NYA.FLuoRiTe姜米條:
   - 喵
   - NYA
@@ -288,11 +320,13 @@ INFiNiTEENERZYOverdoze.RekuMochizuki:
   - 八毛
   - 毛八毛八
   - mopemope
+  - mopamopa
   - mpmp
   - 小蓝花
   - 小兰花
   - 儿童邪典
   - 儿童鞋垫
+  - 花花
   - mope
   - 小花
   - 陶土花盆
@@ -532,6 +566,7 @@ RESSiSTANCE.ぐるたみん:
   - 反抗
 FutureMind.RayNauticaRekuMochizuki:
   - FM
+  - ftrmd
   - 未来头脑
   - 未来之心
 Luminescent.Daison:
@@ -582,6 +617,8 @@ DataErr0r.Cosmograph:
   - d0
 csqn.Aoi:
   - 草酸氢钠
+  - NaHC₂O₄
+  - NaHC2O4
   - 厕所青年
   - 诚实青年
   - 城市青年
@@ -664,6 +701,7 @@ DistortedFate.Sakuzyo:
   - 天鸠食月
   - 扭曲的命运
   - 拧巴的命
+  - 扭曲命运
   - 骨折鸠
 Lyrith迷宮リリス.ユメミド:
   - 迷宫
@@ -941,6 +979,7 @@ Bougainvillea.Jade:
 祈-我ら神祖と共に歩む者なり-.光吉猛修VS穴山大輔VSKaiVS水野健治VS大国奏音:
   - 神祖
   - 祈
+  - 吾乃共主同行者
   - 7
   - 大红星人民
   - 祈我
@@ -973,6 +1012,7 @@ XING.ginkiha:
   - 星
 ReEndofaDream.umavsモリモリあつし:
   - ReDr
+  - 梦境之终
   - 终梦
   - 重置梦境
 ストレイソウルアラウンド.みーに:
@@ -989,6 +1029,7 @@ QuantumHyperspace.D_AAN:
   - 量子空间
 FreakyUndulationsNobleKnightsofTune.JehezukielKURORAK:
   - Freaky Undulations
+  - 高贵音韵之士
   - Freaky
   - 音调骑士
   - funkot
@@ -1036,6 +1077,7 @@ BrokenSky.JungoMAX3feat刘佳宜Snow幻影刃shadow:
 Dreamland.z1onkyrrin:
   - 梦陆
   - 梦境
+  - 梦陆地
   - 梦想之地
 Initialize.iF:
   - 初始化
@@ -1075,6 +1117,7 @@ PRAGMATISMRESURRECTION.Laur:
   - 白复生
   - 复活吧，我的爱人
   - 实用主义复活
+  - 实用主义
   - 牢二
 Antithese.Blacklolita:
   - 反命题
@@ -1250,12 +1293,14 @@ Originally.SNKSMizku:
   - please
   - plz
   - 幻影鬼魅
+  - 幻影
 双重间谍DoubleAgent.WAVAV:
   - scjd
   - 双面间谍
   - 双重间谍
   - 间谍
   - 穿山甲
+  - 打波啊基恩特
 黄金之城GOLDTOWN.Memme:
   - hjzc
   - 黄金之城
@@ -1320,18 +1365,35 @@ KirakiraNoelStory.RekuMochizuki:
   - 拼好歌
   - 圣诞拼好歌
   - 圣诞故事
+  - kirakira
+  - kira
+  - kns
+  - 闪耀圣诞往事
 蝎虎天体Lacertid.CreamvsDaily天利:
   - 蝎虎
   - 蝎虎天体
 ニライカナイNiraicA_naiMix.roopfromSTR:
   - niraikanai
+  - ニライカナイ
+  - 龙宫
 インマイマインド.レシオP:
   - in my mind
+  - 青蛙
+  - 在我心中
 贝多芬祝福BeethovenBlessing.Nauts:
   - 贝多芬祝福
 Shelter.MeatyRabbitNceS:
   - 避难所
+  - 庇护所
 心之所向.姜米條:
   - 心之向往
 瓷岁.茶鸣拾贰律:
   - 烟花
+Ark.kanoryo:
+  - 诺亚方舟
+SwingSkipDrop.ミハイル:
+  - 摇摆 跳跃 抛出
+  - SSD
+宇宙残骸少女CosmicDustyGirl:
+  - 宇宙残骸少女
+  - CDG

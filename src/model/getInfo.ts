@@ -424,30 +424,32 @@ export default class getInfo {
         let reg = /^(?:(http|https|ftp):\/\/)((?:[\w-]+\.)+[a-z0-9]+)((?:\/[^/?#]*)+)?(\?[^#]+)?(#.+)?$/i
         if (ans && !reg.test(ans)) {
             ans = path.join(ortherIllPath, ans)
-        } else if (this.ori_info[id]) {
-            if (fs.existsSync(path.join(originalIllPath, id + '.png'))) {
-                ans = path.join(originalIllPath, id + '.png')
-            } else if (fs.existsSync(path.join(originalIllPath, "ill", id + '.png'))) {
-                if (kind == 'common') {
-                    ans = path.join(originalIllPath, "ill", id + '.png')
-                } else if (kind == 'blur') {
-                    ans = path.join(originalIllPath, "illBlur", id + '.png')
-                } else if (kind == 'low') {
-                    ans = path.join(originalIllPath, "illLow", id + '.png')
+        } else if (this.ori_info[id] || this.sp_info[id]) {
+            if (this.ori_info[id]) {
+                if (fs.existsSync(path.join(originalIllPath, id + '.png'))) {
+                    ans = path.join(originalIllPath, id + '.png')
+                } else if (fs.existsSync(path.join(originalIllPath, "ill", id + '.png'))) {
+                    if (kind == 'common') {
+                        ans = path.join(originalIllPath, "ill", id + '.png')
+                    } else if (kind == 'blur') {
+                        ans = path.join(originalIllPath, "illBlur", id + '.png')
+                    } else if (kind == 'low') {
+                        ans = path.join(originalIllPath, "illLow", id + '.png')
+                    }
+                } else {
+                    if (kind == 'common') {
+                        ans = `${config.onLinePhiIllUrl}/ill/${id + '.png'}`
+                    } else if (kind == 'blur') {
+                        ans = `${config.onLinePhiIllUrl}/illBlur/${id + '.png'}`
+                    } else if (kind == 'low') {
+                        ans = `${config.onLinePhiIllUrl}/illLow/${id + '.png'}`
+                    }
                 }
-            }
-            try {
-                fs.accessSync(ans)
-            } catch (e) {
-                ans = null
-            }
-            if (!ans) {
-                if (kind == 'common') {
-                    ans = `${config.onLinePhiIllUrl}/ill/${id + '.png'}`
-                } else if (kind == 'blur') {
-                    ans = `${config.onLinePhiIllUrl}/illBlur/${id + '.png'}`
-                } else if (kind == 'low') {
-                    ans = `${config.onLinePhiIllUrl}/illLow/${id + '.png'}`
+            } else {
+                if (fs.existsSync(path.join(originalIllPath, "SP", id + '.png'))) {
+                    ans = path.join(originalIllPath, "SP", id + '.png')
+                } else {
+                    ans = `${config.onLinePhiIllUrl}/SP/${id}.png`
                 }
             }
         }
