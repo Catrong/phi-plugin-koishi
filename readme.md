@@ -48,38 +48,6 @@
 </table>
 -->
 
-### 安装：
-
-在Yunzai目录下运行
-
-> 使用Github
-
-```
-#安装插件本体
-git clone --depth=1 https://github.com/Catrong/phi-plugin.git ./plugins/phi-plugin/ 
-#进入插件目录
-cd ./plugins/phi-plugin/ 
-#安装插件所需依赖
-pnpm install -P
-```
-
-> 使用Gitee
-
-```
-git clone --depth=1 https://gitee.com/catrong/phi-plugin.git ./plugins/phi-plugin/ 
-cd ./plugins/phi-plugin/ 
-pnpm install -P 
-```
-
-> [!TIP]
-> 如果pnpm安装依赖过慢，运行：
-> 
->```
->pnpm config set registry https://registry.npmmirror.com
->```
-
----
-
 #### Todo
 
 * [ ] 优化界面设计
