@@ -47,8 +47,8 @@ export default class SaveManager {
     static async saveCheck(session: string) {
         let array = await this.saveArray(session);
 
-        let size = array.length;
-        if (size == 0)
+        let size = array?.length;
+        if (!size)
             throw new Error("存档不存在,sessionToken: " + session);
         else {
             let results = []
