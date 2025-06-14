@@ -116,21 +116,17 @@ export default class getInfo {
          */
         let notesInfo = getFile.FileReader(path.join(infoPath, 'notesInfo.json'))
 
-        /**
-         * @typedef {Object} csvInfoObject
-         * @property {idString} id 曲目id
-         * @property {songString} song 曲目名称
-         * @property {string} composer 作曲
-         * @property {string} illustrator 插画师
-         * @property {string} EZ EZ难度谱师
-         * @property {string} HD HD难度谱师
-         * @property {string} IN IN难度谱师
-         * @property {string|null} AT AT难度谱师
-         */
-        /**
-         * 信息文件
-         * @type {csvInfoObject[]}
-         */
+        
+        interface csvInfoObject {
+            id: idString;
+            song: songString;
+            composer: string;
+            illustrator: string;
+            EZ?: string;
+            HD?: string;
+            IN?: string;
+            AT?: string | null;
+        }
         let Jsoninfo = getFile.FileReader(path.join(infoPath, 'infolist.json'))
 
         /**
