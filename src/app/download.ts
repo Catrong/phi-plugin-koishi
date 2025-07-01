@@ -46,7 +46,7 @@ export default class phiDownload {
 
 
 async function clone(session: Session, config: Config) {
-    let command = `git clone https://gitee.com/Steveeee-e/phi-plugin-ill.git ${cachePath}/original_ill/ --depth=1`;
+    let command = `git clone ${config.downIllUrl} ${cachePath}/original_ill/ --depth=1`;
 
     session.send(session.text(i18nList.download.illBegin));
 
@@ -123,6 +123,16 @@ async function gitErr(err, stdout, session: Session) {
  * @returns
  */
 async function runUpdate(session: Session, config: Config) {
+
+    try {
+        var gitCfg = fs.readFileSync(`${cachePath}/original_ill/.git/config`, "utf8")
+
+        gitCfg = gitCfg.replace(/url\s*=\s*(.*)/, `url = ${config.downIllUrl}`)
+
+        fs.writeFileSync(`${cachePath}/original_ill/.git/config`, gitCfg, "utf8")
+    } catch (err) {
+        logger.error(err)
+    }
 
     let command = `git -C ${cachePath}/original_ill/ pull --no-rebase`;
     command = `git -C ${cachePath}/original_ill/ checkout . && ${command}`;
