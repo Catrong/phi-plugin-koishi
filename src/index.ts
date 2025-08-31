@@ -91,16 +91,16 @@ export const Config: Schema<Config> = Schema.intersect([
         onLinePhiIllUrl: Schema.union([
             // Schema.const("https://gitee.com/Steveeee-e/phi-plugin-ill/raw/main").description("Gitee"),
             Schema.const("https://github.com/Catrong/phi-plugin-ill/blob/main").description("Github"),
-            Schema.const("https://github.moeyy.xyz/https://raw.githubusercontent.com/Catrong/phi-plugin-ill/main").description("Github代理"),
-            Schema.string().description("Custom").default("https://github.moeyy.xyz/https://raw.githubusercontent.com/Catrong/phi-plugin-ill/main")
-        ]).default("https://github.moeyy.xyz/https://raw.githubusercontent.com/Catrong/phi-plugin-ill/main").description("在线曲绘来源"),
+            Schema.const("https://gh.llkk.cc/https://raw.githubusercontent.com/Catrong/phi-plugin-ill/main").description("Github代理"),
+            Schema.string().description("Custom").default("https://gh.llkk.cc/https://raw.githubusercontent.com/Catrong/phi-plugin-ill/main")
+        ]).default("https://gh.llkk.cc/https://raw.githubusercontent.com/Catrong/phi-plugin-ill/main").description("在线曲绘来源"),
         /**下载曲绘源 */
         downIllUrl: Schema.union([
             // Schema.const("https://gitee.com/Steveeee-e/phi-plugin-ill/raw/main").description("Gitee"),
             Schema.const("https://github.com/Catrong/phi-plugin-ill.git").description("Github"),
-            Schema.const("https://github.moeyy.xyz/https://github.com/Catrong/phi-plugin-ill.git").description("Github代理"),
-            Schema.string().description("Custom").default("https://github.moeyy.xyz/https://github.com/Catrong/phi-plugin-ill.git")
-        ]).default("https://github.moeyy.xyz/https://github.com/Catrong/phi-plugin-ill.git").description("下载曲绘源"),
+            Schema.const("https://gh.llkk.cc/https://github.com/Catrong/phi-plugin-ill.git").description("Github代理"),
+            Schema.string().description("Custom").default("https://gh.llkk.cc/https://github.com/Catrong/phi-plugin-ill.git")
+        ]).default("https://gh.llkk.cc/https://github.com/Catrong/phi-plugin-ill.git").description("下载曲绘源"),
         /**渲染精度 */
         renderScale: Schema.number().min(50).max(200).step(1).role('slider').default(100).description("渲染精度"),
         /**渲染质量 */
