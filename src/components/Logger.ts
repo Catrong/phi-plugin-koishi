@@ -1,19 +1,19 @@
-import { Context } from "koishi";
+import { Logger } from "koishi";
 
-let Logger: Context['logger']
+
+let Log = new Logger('phi-plugin')
 
 export class logger {
     static info(...msg: any[]) {
-        Logger.info(msg.join('\n'))
+        Log.info(msg.join('\n'))
     }
     static error(...msg: any[]) {
-        Logger.error(msg.join('\n'))
+        Log.error(msg.join('\n'))
     }
     static warn(...msg: any[]) {
-        Logger.warn(msg.join('\n'))
+        Log.warn(msg.join('\n'))
     }
 }
 
-export function apply(ctx: Context) {
-    Logger = ctx.logger
+export function apply() {
 }
