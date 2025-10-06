@@ -16,7 +16,6 @@ export default class phiHelp {
             }
 
             let helpGroup = await getFile.FileReader(path.join(infoPath, 'help.json'))
-
             session.send(await render(ctx, "help", {
                 helpGroup: helpGroup,
                 cmdHead: getInfo.getCmdPrefix(ctx, session, true),
