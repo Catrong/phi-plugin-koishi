@@ -28,6 +28,7 @@ Anomaly:
 Spasmodic(Haocore Mix):
   - 痉挛SP
   - 小痉挛
+  - Spasmodicsp
 Burn(Haocore Mix):
   - BurnSP
   - 烤全鸭SP
@@ -35,6 +36,8 @@ Burn(Haocore Mix):
   - 烤全压SP
   - 考全压SP
   - 烤鸭SP
+  - 卖核弹的小女孩SP
+  - 卖火柴的小女孩SP
 Sigma (Haocore Mix) ~ 105秒の伝説 ~:
   - sigma表SP
   - sigmaSP1
@@ -164,6 +167,7 @@ Glaciaxion.SunsetRay:
   - Sonshi
   - 樽尸
 Spasmodic.姜米條颶風元力上人:
+  - Spasmodic
   - 癫痫
   - 小姐姐
   - 久住
@@ -602,6 +606,7 @@ Wavetapper.Frums:
   - 樱树街道
   - 樱树
   - 樱街
+  - ysjd
   - Sakuragi
   - 樱花雨
 volcanic.DETROakaルゼ:
@@ -758,6 +763,7 @@ Aventyr.GrandThawRigelTheatre:
   - 冒险
 lifeflashesbeforeweebeyes.BilliumMoto:
   - 小黄歌
+  - 小黄瓜
   - lfbwe
   - 黄发小姐姐
 BelieveLightfeat果丸哒呦.ScalerMestie果丸哒呦:
@@ -848,6 +854,7 @@ PoisonANDORAffection.LeaF:
   - 毒药和爱
   - Pandora
   - ÷
+  - 除号
   - 草潘
   - 潘
 CervelleConnexion.SCTL:
@@ -857,6 +864,7 @@ CervelleConnexion.SCTL:
   - 脑链接
   - 脑连接
   - cc
+  - CN
 NowIsTheTimeDoIt.RoyMikelate:
   - 干他
   - 现在是时间了，干他
@@ -1033,6 +1041,7 @@ TriumphRegret.typeMARS:
   - 胜利与遗憾
 DiamondEyes.SYNTHETIC:
   - 钻石眼
+  - 星空眼
 Ajourneytothemoonlight.Yesod:
   - 月球
   - 月旅
@@ -1304,6 +1313,7 @@ Antithese.Blacklolita:
   - 反命题
 云女孩.符白牙SiYFics:
   - 云女鬼
+  - 炸云
 千紫万紅.r0yvsWABI:
   - 千紫万红
   - 千恋万花
@@ -1341,6 +1351,7 @@ Demiurge.Rabpit:
   - 造物主
   - 创世神
   - 创
+  - 创世主	
 Electron.ElousFZ:
   - 电子
   - 绿色药水
@@ -1636,12 +1647,14 @@ SwingSkipDrop.ミハイル:
   - CDG
   - 残骸
   - 宇宙残害少女
+  - 宇女
 AbsoluTedisoRdeR.AcuteDisarray:
   - ATRR
   - 挨踢啊啊
   - Ad
   - 绝对混乱
   - 绝对失序
+  - 绝对无序
   - 四方联动
   - 四世同堂
 KIZUNAResolution.TAG:
@@ -1668,6 +1681,7 @@ LuminousEntitiesLostHeart.NormalMfeatUsagiDenki:
 DevIAtiOnshortver.polysha:
   - dev
   - 偏差
+  - 偏离
   - 反叛
   - DevlAtiOn
   - DIAO
@@ -1717,6 +1731,7 @@ DiamondDust.MasahiroGodspeedAoki:
   - 钻尘
   - 钻石星尘
   - 尘钻
+  - 高濑梨绪	
 FrozenHeart.A39沙包P:
   - 冰心
   - 冰之心
@@ -1808,6 +1823,8 @@ RetributionCycleofRedemption.ArdolfvsDaily天利:
 アンビバレンス.すりぃ相沢:
   - 矛盾
   - 矛盾相生
+  - Ambivalence
+  - 矛盾心理
 Komplexe.雄之助featSennzai:
   - 复杂
 slips.rintarosoma:
@@ -1815,12 +1832,29 @@ slips.rintarosoma:
   - 滑动
   - sølips
   - 嗦
+  - 一百块
   - 孤心独映
+  - 唯我论
+  - ∅
+  - solips
 QZKagoRequiem.tpazolite:
   - 凯尔希大战嵯峨
   - 茄子
+  - 茄子卡狗
   - 镇魂曲
   - 垃圾桶安魂曲
   - 牛奶大战
   - 牛奶2
   - QZK
+  - qz
+  - QZKago
+  - 两只猫打架
+  - 喜羊羊与灰太狼
+000AinSophAur.Yumeji:
+  - OOO
+  - "000"
+  - Ain Soph Aur
+  - 无限光
+  - 无限之光
+SolaggyfeatUzumaki.ShrimpCatsはぁち後藤涼輔:
+  - SL
